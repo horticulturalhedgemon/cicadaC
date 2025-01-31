@@ -1,0 +1,14 @@
+# script name
+name: hello-world
+# trigger action on push
+on: push
+#jobs are the actions taken. Each job is a sequence of actions
+jobs:
+  hello-world-job:
+    #where the job is hosted, where the commands run
+    runs-on: ubuntu-latest
+    steps:
+     - name: Check out repository code
+       #must checkout for actions that involve using your repo
+       uses: actions/checkout@v3
+     - run: echo "$(cat hello_world.txt)"
