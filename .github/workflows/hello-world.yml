@@ -12,3 +12,4 @@ jobs:
        #must checkout for actions that involve using your repo
        uses: actions/checkout@v3
      - run: echo "$(cat hello_world.txt)"
+     - run: python tests.py
